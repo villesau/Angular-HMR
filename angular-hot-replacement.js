@@ -24,7 +24,7 @@ HotAngular.prototype.directive = require('./interceptors/directive');
 HotAngular.prototype.controller = require('./interceptors/controller');
 
 HotAngular.prototype.reloadState = function() {
-  var elm = angular.element(document.querySelector('[ng-app]'));
+  var elm = angular.element(document.querySelector('body'));
   if (elm) {
       if (elm.injector().has('$state')) {
           console.log('Reloading State');
